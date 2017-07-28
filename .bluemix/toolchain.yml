@@ -23,10 +23,10 @@ toolchain:
       $ref: "#/messages/template.gettingStarted"
 services:
   sample-repo:
-    service_id: githubenterprise
+    service_id: github_integrated
     parameters:
       repo_name: '{{toolchain.name}}'
-      type: link
+      type: fork
       has_issues: true
       enable_traceability: true
   sample-build:
