@@ -13,21 +13,20 @@ template:
     - sample-repo
   info:
     git url: >-
-      [https://github.com/open-toolchain/simple-toolchain](https://github.com/open-toolchain/simple-toolchain)
+      [https://github.com/nicolasegomez/simple-toolchain](https://github.com/nicolasegomez/simple-toolchain)
     git branch: >-
-      [master](https://github.com/open-toolchain/simple-toolchain/tree/master)
+      [master](https://github.com/nicolasegomez/simple-toolchain/tree/master)
 toolchain:
-  name: 'simple-toolchain-{{timestamp}}'
+  name: 'ejemplo-toolchain-{{timestamp}}'
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
 services:
   sample-repo:
-    service_id: githubpublic
+    service_id: githubprivate
     parameters:
       repo_name: '{{toolchain.name}}'
-      repo_url: 'https://github.com/open-toolchain/node-hello-world'
-      type: clone
+      type: link
       has_issues: true
       enable_traceability: true
   sample-build:
