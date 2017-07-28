@@ -26,6 +26,7 @@ services:
     service_id: github_integrated
     parameters:
       repo_name: '{{toolchain.name}}'
+      source_repo_url: 'https://github.ibm.com/niezgom/ejemplo-chat'
       type: fork
       has_issues: true
       enable_traceability: true
